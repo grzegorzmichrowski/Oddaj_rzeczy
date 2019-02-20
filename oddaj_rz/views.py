@@ -21,8 +21,8 @@ class LoginView(View):
     def post(self, request):
         form = LoginForm(request.POST)
         if form.is_valid():
-            user = authenticate(username=form['login'].value(),
-                                password=form['password'].value())
+            user = authenticate(username=form.cleaned_data['email'].value(),
+                                password=form.cleaned_data['password'].value())
             if user:
                 login(request, user)
                 return redirect('landing_page')
