@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 from oddaj_rz.views import LandingPageView, LoginView, LogoutView, RegisterView, GiveFormView
+admin.site.site_header = "Administracja- Oddaj Rzeczy"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
