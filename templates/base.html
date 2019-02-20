@@ -25,8 +25,8 @@
         </ul>
         {% else %}
         <ul class="nav--actions">
-          <li><a href="{% url "login" %}" class="btn btn--small btn--without-border">Zaloguj</a></li>
-          <li><a href="{% url "register" %}" class="btn btn--small btn--highlighted">Załóż konto</a></li>
+          <li><a href="{% url "login" %}#login-part" class="btn btn--small btn--without-border">Zaloguj</a></li>
+          <li><a href="{% url "register" %}#register-part" class="btn btn--small btn--highlighted">Załóż konto</a></li>
         </ul>
         {% endif %}
 
