@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from oddaj_rz.views import LandingPageView, LoginView, LogoutView, RegisterView
+from oddaj_rz.views import LandingPageView, LoginView, LogoutView, RegisterView, GiveFormView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,6 +24,7 @@ urlpatterns = [
     path('login', LoginView.as_view(), name='login'),
     path('logout', LogoutView.as_view(), name='logout'),
     path('register', RegisterView.as_view(), name='register'),
+    path('form', GiveFormView.as_view(), name='form')
 ]
 
 

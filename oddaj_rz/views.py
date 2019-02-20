@@ -74,3 +74,9 @@ class RegisterView(View):
                 return redirect('login')
         text = 'Hasła niezgodne'
         return render(request, 'register.html', {"text": text})
+
+
+class GiveFormView(View):
+
+    def get(self, request):
+        return render(request, 'form.html')
